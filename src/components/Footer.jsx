@@ -7,7 +7,7 @@ const Footer = () => {
   const navigate = useNavigate();
   return (
     <div className='md:mx-14 bg-gray-400 rounded-t-lg mb-1 px-4 mx-4'>
-        <div className='w-full flex flex-row sm:gird grid-rows-[3fr_1fr_1fr] my-6 text-sm'>
+        <div className='w-full flex flex-col sm:flex-row grid-flow-col sm:gird grid-rows-[3fr_1fr_1fr] my-6 text-sm'>
             {/* Left section */}
             <div className='w-full p-2 m-2 text-center'>
                <img className='mb-4 w-14' src={assets.Logo} alt="" />
