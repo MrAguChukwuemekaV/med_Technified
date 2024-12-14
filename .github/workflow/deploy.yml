@@ -1,88 +1,88 @@
-name: Deploy
+# name: Deploy
 
 
-on: 
+# on: 
   
-   push:
+#    push:
      
-     branch:
+#      branch:
 
-      -main:
+#       -main:
 
 
 
-jobs:
+# jobs:
   
-  build: 
+#   build: 
    
-    name: Build
+#     name: Build
 
-      runs-on; ubuntu-latest
-
-
-      steps:
-
-        -name: Checkout repo
-
-         uses: actions/checkout@v3
+#       runs-on; ubuntu-latest
 
 
-        -name: Setup Node
+#       steps:
 
-         uses: actions/setup-node@v3
+#         -name: Checkout repo
 
-        
-        -name: Install dependencies
-
-         uses: bahmutov/npm-install@v1
+#          uses: actions/checkout@v3
 
 
-        -name: Build project
-        
-         run: npm run build
+#         -name: Setup Node
+
+#          uses: actions/setup-node@v3
 
         
-        -name: Upload production-ready build files
+#         -name: Install dependencies
 
-         uses: actions/upload-artifact@v3
+#          uses: bahmutov/npm-install@v1
 
-         with:
+
+#         -name: Build project
+        
+#          run: npm run build
+
+        
+#         -name: Upload production-ready build files
+
+#          uses: actions/upload-artifact@v3
+
+#          with:
            
-           name: production-files
+#            name: production-files
 
-           path: ./dist
-
-
-deploy: 
-
-     name: Deploy
-
-     needs: build
-
-     runs-on: ubuntu-latest
-
-     if: github.ref == 'refs/heads/main'
+#            path: ./dist
 
 
+# deploy: 
 
-     steps: 
+#      name: Deploy
+
+#      needs: build
+
+#      runs-on: ubuntu-latest
+
+#      if: github.ref == 'refs/heads/main'
+
+
+
+#      steps: 
       
-      -name: Download artifact
+#       -name: Download artifact
 
-       uses: actions/download-artifact@v3
+#        uses: actions/download-artifact@v3
          
-        with:
+#         with:
            
-           name: production-files
+#            name: production-files
 
-           path: ./dist
+#            path: ./dist
 
-       -name: Deploy to Github Pages
+#        -name: Deploy to Github Pages
 
-        uses: peaceiris/actions-gh-pages@v3
+#         uses: peaceiris/actions-gh-pages@v3
 
-        with: 
+#         with: 
 
-           github_token: ${{secrets.GITHUB_TOKEN}}     
+#            github_token: ${{secrets.GITHUB_TOKEN}}     
 
-           publish_dir: ./dist
+#            publish_dir: ./dist
