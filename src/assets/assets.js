@@ -10,6 +10,7 @@ import info_icon from './info_icon.png'
 import stripe from './stripe.png'
 import about_image from './about_image.jpg'
 import contact_image from './contact_image.jpg'
+import menu_icon from './menu_icon.png'
 import Doc1 from './Doc1.jpg'
 import Doc2 from './Doc2.png'
 import Doc3 from './Doc3.png'
@@ -48,7 +49,7 @@ export const assets ={
     arrow_icon,
     contact_image,
     about_image,
-    // menu_icon,
+    menu_icon,
     // cross_icon,
     // dropdown_icon,
     // upload_icon,

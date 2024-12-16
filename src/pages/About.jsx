@@ -9,7 +9,7 @@ const About = () => {
       </div>
 
       <div className='w-full my-8 flex flex-col md:flex-row p-6 gap-12 '>
-        <img className='border border-solid border-gray-500 rounded-tr-2xl rounded-bl-2xl bg-gray-500 p-2 md:max-w-[360px' src={assets.about_image} alt="" />
+        <img className='border border-solid border-gray-500 rounded-2xl bg-gray-500 p-2 md:max-w-[360px' src={assets.about_image} alt="" />
         <div className='w-full px-8 flex flex-col justify-center gap-6  text-base text-start '>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, eaque dolorem.  in iste nostrum itaque officiis laudantium quod quae distinctio eius.</p>
           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.  Exercitationem, consectetur.</p>
@@ -22,14 +22,14 @@ const About = () => {
         <p className='font-semibold'>WHY CHOOSE US</p>
       </div>
 
-      <div className='flex flex-row mb-20'>
+      <div className='flex flex-col gap-2 md:gap-0 md:flex-row mb-20'>
         <div className='border border-solid px-8 md:px-16 sm:py-12 flex flex-col gap-5 text-[15px] hover:bg-gray-500 hover:text-white transition-all duration-300 cursor-pointer text-gray-500'>
           <b>Personalization:</b>
           <p>Tailored recommedations and reminders to help you dtsy on top of your health priorities</p>
         </div>
 
         <div className='border border-solid px-8 md:px-16 sm:py-12 flex flex-col gap-5 text-[15px] hover:bg-gray-500 hover:text-white transition-all duration-300 cursor-pointer text-gray-500'>
-          <b>Efficiency;</b>
+          <b>Efficiency:</b>
           <p>streamline appointment scheduling that fits ito your busy lifestyle</p>
         </div>
 
